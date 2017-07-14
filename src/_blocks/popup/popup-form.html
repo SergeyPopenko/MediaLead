@@ -1,0 +1,74 @@
+<section class="popup" id="popup-form">
+  <div class="popup__inner">
+    <div class="popup__wrap">
+      <button type="button" class="popup__close">
+        Закрыть
+        <svg width="24" height="24">
+          <use xlink:href="#icon-cross" />
+        </svg>
+      </button>
+      <h2 class="popup__title">Вопросы или комментарии?</h2>
+      <div class="popup__descr">
+        <p>Просто заполните и отправьте нам форму</p>
+      </div>
+      <form class="form" action="/echo" method="POST" id="feedback">
+        <fieldset class="form__field">
+          <label class="form__label">
+            <span class="form__label-text">Имя*</span>
+            <span class="form__input-wrap">
+              <input type="text" class="form__input" name="name" title="Имя должно содержать не менее 2-х букв" required>
+              <span class="form__icon-wrap">
+                <svg width="22" height="22">
+                  <use xlink:href="#icon-user" />
+                </svg>
+              </span>
+            </span>
+          </label>
+        </fieldset>
+        <fieldset class="form__field">
+          <label class="form__label">
+            <span class="form__label-text">Тел.*</span>
+            <span class="form__input-wrap">
+              <input type="tel" class="form__input" name="tel" title="Телефон должен быть в формате +7 (XXX) XXX XX XX" required>
+              <span class="form__icon-wrap">
+                <svg width="22" height="22">
+                  <use xlink:href="#icon-phone" />
+                </svg>
+              </span>
+            </span>
+          </label>
+        </fieldset>
+        <fieldset class="form__field">
+          <label class="form__label">
+            <span class="form__label-text">Email*</span>
+            <span class="form__input-wrap">
+              <input type="email" class="form__input" name="email" required>
+              <span class="form__icon-wrap">
+                <svg width="22" height="22">
+                  <use xlink:href="#icon-email" />
+                </svg>
+              </span>
+            </span>
+          </label>
+        </fieldset>
+        <fieldset class="form__field">
+          <label class="form__label">
+            <span class="form__label-text">Сообщение</span>
+            <span class="form__input-wrap">
+              <textarea class="form__input form__input--textarea" name="message"></textarea>
+              <span class="form__icon-wrap">
+                <svg width="22" height="22">
+                  <use xlink:href="#icon-message" />
+                </svg>
+              </span>
+            </span>
+          </label>
+        </fieldset>
+        <fieldset class="form__field">
+          <button type="submit" class="btn form__btn">Отправить</button>
+        </fieldset>
+        <p class="form__privat">* Нажимая на кнопку "Отправить", я даю <a href="/doc/soglasie_na_obrabotky_pdn.pdf">согласие на обработку персональных данных</a></p>
+      </form>
+    </div>
+  </div>
+</section>

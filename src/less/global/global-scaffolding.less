@@ -4,10 +4,10 @@ html {
   font-size: @font-size-global;
 }
 body {
-  background: @bg-global;
+  background: @bg;
 
-  font: 1rem/1 "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
-  color: @col-global;
+  font: 1rem/1 "ProximaNovaCondensed", "Helvetica", "Arial", "Helvetica CY", "Nimbus Sans L", sans-serif;
+  color: @col;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,4 +17,26 @@ body {
 *::after,
 *::before {
   box-sizing: inherit;
+}
+
+.body-popup {
+  overflow: hidden;
+}
+
+.hidden {
+  @media @t-m {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    visibility: hidden;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+}
+
+@media @s {
+  body {
+    padding-top: 44px;
+  }
 }

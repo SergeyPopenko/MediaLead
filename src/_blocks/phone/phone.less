@@ -1,0 +1,26 @@
+.phone {
+  display: inline-block;
+
+  font-size: 18px;
+  line-height: 1;
+  color: @col-light;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+
+  order: 2;
+  flex-shrink: 0;
+}
+
+@media @s {
+  .phone {
+    width: 130px;
+    text-align: right;
+    font-size: 16px;
+    letter-spacing: 0.025em;
+    &--small {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+    }
+  }
+}

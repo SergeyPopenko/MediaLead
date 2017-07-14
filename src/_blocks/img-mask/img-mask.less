@@ -1,0 +1,97 @@
+.img-mask {
+  .mask(#fdfbfb);
+}
+.mask(@bg: #fff;) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &__trianlge-l {
+    position: absolute;
+    width: 16.666667%;
+    height: 55.776892%;
+    background-image: linear-gradient(to top right, @bg 49%, transparent 50%);
+    left: 12.121212%;
+    top: 100%;
+    transition: 1s;
+    .img-mask--animation & {
+      top: 25%;
+    }
+  }
+  &__trianlge-r {
+    position: absolute;
+    width: 16.666667%;
+    height: 55.776892%;
+    left: 38%;
+    top: 100%;
+    background-image: linear-gradient(to top left, @bg 49%, transparent 50%);
+    transition: 1s;
+    .img-mask--animation & {
+      top: 25%;
+    }
+  }
+  &__trianlge-cl {
+    position: absolute;
+    left: 16.666667%;
+    top: -100%;
+    width: 16.666667%;
+    height: 55.776892%;
+    background-image: linear-gradient(to top right, transparent 49%, @bg 50%);
+    transition: 1s;
+    .img-mask--animation & {
+      top: 0;
+    }
+  }
+  &__trianlge-cr {
+    position: absolute;
+    left: 33.333333%;
+    top: -100%;
+    width: 16.666667%;
+    height: 55.776892%;
+    background-image: linear-gradient(to top left, transparent 49%, @bg 50%);
+    transition: 1s;
+    .img-mask--animation & {
+      top: 0;
+    }
+  }
+  &__rectangle-b {
+    position: absolute;
+    width: 62%;
+    left: -100%;
+    bottom: 0;
+    height: 20%;
+    background: @bg;
+    transition: 1s;
+    .img-mask--animation & {
+      left: 0;
+    }
+  }
+  &__rectangle-r {
+    position: absolute;
+    width: 25.757575%;
+    bottom: 100%;
+    background: @bg;
+    top: 0;
+    right: 0;
+    transition: 1s;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      width: 30.588236%;
+      height: 23.5849%;
+      background: @bg;
+      top: 0;
+    }
+    .img-mask--animation & {
+      bottom: 15.936255%;
+    }
+  }
+}
+
+@media @s {
+  .img-mask {
+    display: none;
+  }
+}

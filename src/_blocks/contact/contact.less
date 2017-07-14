@@ -1,0 +1,88 @@
+.contact {
+  color: @col-light;
+}
+
+.contact__wrap {
+  .wrap();
+  background: url(/img/contact/bg_1170.jpg) no-repeat 50% 0;
+  background-size: cover;
+}
+
+.contact__inner {
+  padding: 160px 0 78px;
+}
+
+.contact__title {
+  .title(0 0 43px, inherit);
+}
+
+.contact__descr {
+  max-width: 700px;
+  margin: 0 auto 62px;
+
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  p {
+    margin: 0;
+
+    letter-spacing: .025em;
+  }
+}
+
+.contact__btn {
+  display: block;
+  max-width: 170px;
+  margin: 0 auto;
+  padding: 13px 15px;
+
+  background: @bg-red;
+
+  color: inherit;
+}
+
+@media @t {
+  .contact__wrap {
+    background-image: url(/img/contact/bg_1024.jpg);
+  }
+}
+
+@media @s {
+  .contact__wrap {
+    @media @p {
+      background-image: url(/img/contact/bg_412p.jpg);
+    }
+
+    @media @l {
+      background-image: url(/img/contact/bg_767l.jpg);
+    }
+  }
+
+  .contact__inner {
+    padding: 117px 10px 134px;
+  }
+
+  .contact__title {
+    margin-bottom: 25px;
+  }
+
+  .contact__descr {
+    margin-bottom: 52px;
+
+    font-size: 16px;
+    line-height: 1.13;
+  }
+
+  .contact__btn {
+    max-width: 160px;
+    padding: 6px 10px;
+  }
+}
+
+@media @480 {
+  .contact__wrap {
+    @media @l {
+      background-image: url(/img/contact/bg_412l.jpg);
+    }
+  }
+}

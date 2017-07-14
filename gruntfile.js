@@ -183,9 +183,9 @@ module.exports = function(grunt) {
       symbols: {
         files: [{
           expand: true,
-          src: ["build/img/symbols.svg"]
+          src: ["build/img/**/*.svg", "!build/img/svg/symbols.svg"]
         }]
-      }
+      },
     },
 
     // Синхронизация браузера
@@ -206,7 +206,7 @@ module.exports = function(grunt) {
     // Отслеживаем изенения в указанных файлах и выполняем описанные действия
     watch: {
       style: {
-        files: ["src/_blocks/**/*.less"],
+        files: ["src/_blocks/**/*.less", "src/less/**/*"],
         tasks: ["style"],
         options: {
           spawn: false,
@@ -255,7 +255,7 @@ module.exports = function(grunt) {
       },
       font: {
         files: ["src/fonts/**/*"],
-        tasks: ["copy:font"],
+        tasks: ["copy:font", "style"],
         options: {
           spawn: false,
           livereload: true
@@ -268,7 +268,7 @@ module.exports = function(grunt) {
   grunt.registerTask("production", [
     "clean",
     "csscomb",
-    "less",
+    "style",
     "cmq",
     "csso",
     "concat",

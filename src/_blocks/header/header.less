@@ -1,3 +1,36 @@
 .header {
+  padding: 20px 0;
 
+  background: @bg-dark;
+  position: relative;
+}
+
+.header__wrap {
+  .wrap(1060px);
+}
+
+.header__inner {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media @s {
+  .header {
+    padding: 11px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .header__logo {
+    width: 130px;
+    flex-shrink: 0;
+    img {
+      max-width: 83px;
+    }
+  }
 }
